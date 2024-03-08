@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuni Kada</title>
+
+    
+    <!-- icon -->
+    <link rel="icon" type="img/jpg" href="./assets/img/logo/tk_short-logo-png-copy.png">
+
+    <!-- icon link cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./product-info.css">
+
+    <!-- BS CSS -->
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <!-- BS jquery -->
+    <!-- <script defer src="./assets/bootstrap-5.2.3-dist/jquery/jquery.js"></script> -->
+    <script defer src="./assets/bootstrap-5.2.3-dist/jquery/jquery.min.js"></script>
+
+    <!-- BS JS -->
+    <script defer src="./assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="content bg-black">
+            <img src="./assets/img/logo/thuni-kada.jpg" width="200px" class="d-block mx-auto" alt="" />
+        </div>
+    </header>
+
+    <main>
+
+        <section id="tk_product">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="img_content ">
+                            <h2 class="afr_line" id="color_h3"></h2>
+                            <img id="img_blue" class="img-fluid rounded" src="./assets/img/products/NavyBlue_thuni-kada.jpg"
+                                style="display: none;">
+                            <img id="img_yellow" class="img-fluid rounded" src="./assets/img/products/yellow_thuni-kada.jpg"
+                                style="display: none;">
+                            <img id="img_black" class="img-fluid rounded" src="./assets/img/products/black_thuni-kada.jpg"
+                                style="display: none;">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-8">
+                        <div class="l_content card p-2 px-4 mt-5">
+                            <h2 id="color_name_output"></h2>
+                            <h5 class="text-success" id="tk_description_blue" style=" display: none;">Men Printed Navy
+                                Blue Round
+                                Neck Poly Cotton T-Shirt
+                                | Thuni Kada</h5>
+                            <h5 class="text-success" id="tk_description_yellow" style=" display: none;">Men Printed
+                                Yellow Round
+                                Neck Poly Cotton T-Shirt
+                                | Thuni Kada</h5>
+                            <h5 class="text-success" id="tk_description_black" style=" display: none;">Men Printed Black Round Neck Poly Cotton T-Shirt 
+                                | Thuni Kada</h5>
+                            <div class="position-relative my-2">
+                                <div class="star_rating rounded-5">
+                                    <p class="p1 ms-2 text-light">5.0<i class="fa-solid fa-star position-relative "></i>
+                                    </p>
+                                </div>
+
+                                <div class="reviews text-secondary position-absolute">72,550 ratings and 47,060 reviews
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <h3 class="text-success me-3" id="tk_discount"></h3> 
+                            </div>
+
+                            <div class="my-lg-3 my-md-1">
+                                <h4><img class="tk_brand_img" src="./assets/img/logo/thuni-kada-cart.jpg" alt=""><span
+                                        class="tk_brand_trust text-info ">100 years of Trust</span></h4>
+                            </div>
+
+                            <form class="size_form  my-md-1" action="">
+                                <div class="size my-3 my-lg-4 my-md-1 text-nowrap">
+                                    <label for="size">Size</label>
+                                    <input class="tk_size tk_size_s p-2 me-1 me-md-2" type="button" value="S">
+                                    <input class="tk_size tk_size_m p-2 me-1 me-md-2" type="button" value="M">
+                                    <input class="tk_size tk_size_l p-2 me-1 me-md-2" type="button" value="L">
+                                    <input class="tk_size tk_size_xl p-2 me-1 me-md-2" type="button" value="XL">
+                                    <input class="tk_size tk_size_xxl p-2 me-1 me-md-2" type="button" value="XXL">
+                                    <p class="text-danger" id="select_size_warning" style="display: none;">Select Your
+                                        Size*</p>
+                                </div>
+
+                                <div class="quantity my-lg-4 my-md-3 text-nowrap">
+                                    <label for="quantity">Quantity</label>
+                                    <!-- <input class="quant_ind plus p-2  " type="button" value="+"> -->
+
+                                    <!-- <button class="quant_ind plus p-2" onclick="minus()">-</button> -->
+                                    <input class="quant_ind minus bg-info p-2" value="-" onclick="minus()"
+                                        type="button">
+                                    <input class="p-2 w-25" id="quantity_count" type="number" name="" value="1"
+                                        readonly>
+                                    <input class="quant_ind minus bg-info p-2  position-relative " value="+"
+                                        onclick="plus()" type="button">
+                                    <!-- <button class="quant_ind minus p-2  position-relative " onclick="plus()">+</button> -->
+
+                                    <!-- <input class="p-2 w-25" type="text" readonly>
+                                    <input class="quant_ind minus p-2  position-relative " type="button" value="-"> -->
+                                </div>
+
+                                <div class="mt-lg-3">
+                                    <p class="tk_total">Total Price: <span class="text-success"
+                                            id="tk_total_price"></span></p>
+                                </div>
+                                <input class="btn btn-danger mt-lg-5 p-2 px-4 mt-md-2" type="button" value="Buy Product" onclick="buyProduct_()">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script>
+    //local storage
+    var color_ = localStorage.getItem("color"); //color of the tee for img and h and description
+    var discount_price_ = localStorage.getItem("discount"); // discount
+    var max_Quantity_ = localStorage.getItem("quantity"); //quantity
+    var org_price = localStorage.getItem("org_price"); //orginal price
+    
+
+    //fare use
+    var color_h3 = document.getElementById("color_h3");
+    var blue_img = document.getElementById('img_blue').src;
+    var yellow_img = document.getElementById('img_yellow').src;
+    var black_img = document.getElementById('img_black').src;
+    // console.log(blue_img);
+    // console.log(yellow_img);
+    // console.log(black_img);
+
+    // document.getElementById(pre_org_price) = org_price;
+    // org_price = document.getElementById(pre_org_price);
+
+    var quantity_count = document.getElementById('quantity_count');
+    var tk_total_price = document.getElementById('tk_total_price');
+    var select_size_warning = document.getElementById('select_size_warning');
+    var current_value;
+
+    // console.log(discount_substr_);
+    var discount_substr_ = discount_price_.substr("1");
+
+
+    // + | - plus or minus
+    {
+        function plus() {
+            console.log(max_Quantity_);
+            console.log(quantity_count.value);
+            console.log(typeof(max_Quantity_));
+            console.log(parseInt(max_Quantity_) > quantity_count.value);
+            if (parseInt(max_Quantity_) > quantity_count.value) {
+                quantity_count.value++;
+                current_value = discount_substr_ * quantity_count.value;
+                // console.log(discount_substr_);
+                // console.log(quantity_count.value);
+                current_value = '₹' + current_value;
+                tk_total_price.innerText = current_value;
+                // console.log(current_value);
+
+            }
+        }
+
+        function minus() {
+            if (quantity_count.value > 1) {
+                quantity_count.value--;
+                current_value = quantity_count.value * discount_substr_;
+                current_value = '₹' + current_value;
+                tk_total_price.innerText = current_value;
+                // console.log(current_value);
+            }
+        }
+    }
+
+
+
+    // document.getElementById("color_name_output").innerText = color_;
+    // console.log(color_);
+    // console.log(discount_price_)
+    // let dnfkn = document.createElement("tk_description").innerText;
+    // console.log(dnfkn);
+
+    // color_ = color_h3.innerText;
+    color_h3.innerText = color_;
+    // display accordingly
+    if (color_ == "Thuni Kada Blue Tee") {
+        document.getElementById('img_blue').style = "display:block;";
+        document.getElementById('tk_description_blue').style = "display:block";
+        document.getElementById('tk_discount').innerText = discount_price_;
+
+    }
+    else if (color_ == "Thuni Kada Yellow Tee") {
+        document.getElementById('img_yellow').style = "display:block;";
+        document.getElementById('tk_description_yellow').style = "display:block";
+        document.getElementById('tk_discount').innerText = discount_price_;
+
+    }
+    if (color_ == "Thuni Kada Black Tee") {
+        document.getElementById('img_black').style = "display:block;";
+        document.getElementById('tk_description_black').style = "display:block";
+        document.getElementById('tk_discount').innerText = discount_price_;
+
+    }
+
+
+
+    // size 
+    var tk_size = document.querySelectorAll(".tk_size");
+    var tk_size_value;
+    for (var i = 0; i < tk_size.length; i++) {
+        tk_size[i].addEventListener("click", function () {
+            tk_size_value = this.value;
+
+            // alert("u touched ");
+            // console.log(tk_size_value);
+
+        });
+    }
+    // buy product
+    function buyProduct_() {
+
+        if (tk_size_value) {
+            // console.log(tk_size_value);
+            localStorage.setItem("h3_color", color_);
+            localStorage.setItem("quantity", quantity_count.value);
+            localStorage.setItem("size", tk_size_value);
+            localStorage.setItem("total", tk_total_price.innerText);
+            localStorage.setItem("discount", discount_price_);
+            window.location.href = "buying.html";
+            if (color_ == "Thuni Kada Blue Tee") {
+                localStorage.setItem("img", blue_img);
+                window.location.href = "buying.html";
+
+            }
+            else if (color_ == "Thuni Kada Yellow Tee") {
+                localStorage.setItem("img", yellow_img);
+                window.location.href = "buying.html";
+
+            }
+            if (color_ == "Thuni Kada Black Tee") {
+                localStorage.setItem("img", black_img);
+                window.location.href = "buying.html";
+
+            }
+            // console.log(quantity_count.value);
+            // console.log(tk_size_value);
+            // console.log(tk_total_price.innerText);
+        } else {
+
+            document.getElementById("select_size_warning").style = "display:block;";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    // buttons activation
+    let buttons = document.querySelectorAll(".tk_size");
+
+    let previousButton = null;
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            // If there is a previous button, remove the selected class from it
+            if (previousButton) {
+                previousButton.classList.remove("selected");
+            }
+
+            // Add the selected class to the current button
+            button.classList.add("selected");
+
+            // Update the previous button to the current button
+            previousButton = button;
+        });
+    }
+</script>
+
+
+</html>

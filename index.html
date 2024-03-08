@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THUNI KADA</title>
+
+    <!-- icon -->
+    <link rel="icon" type="img/jpg" href="./assets/img/logo/tk_short-logo-png-copy.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- BS CSS -->
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+
+    <!-- AOS Link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- BS jquery -->
+    <script defer src="./assets/bootstrap-5.2.3-dist/jquery/jquery.js"></script>
+
+    <!-- BS JS -->
+    <script defer src="./assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="alert alert-warning alert-dismissible fade show position-fixed w-100" id="alert" style="display: none;"
+        role="alert">
+        <strong>Thuni Kada: </strong>Please select Your Discount and Type the Max Quantity
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <header>
+        <div class="content bg-black">
+            <img src="./assets/img/logo/thuni-kada.jpg" width="200px" class="d-block mx-auto" alt="" />
+        </div>
+    </header>
+
+    <main>
+        <section id="tk">
+            <div class="container">
+                <div class="row my-4">
+                    <!-- contents starting -->
+                    <!-- Navy Blue -->
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in" data-aos-duration="7000"
+                            class=" d-flex justify-content-center">
+                            <div class="card mt-2 mb-5 w-75">
+
+                                <div class="contents p-3">
+                                    <img src="./assets/img/products/NavyBlue_thuni-kada.jpg" class="img-fluid" height=""
+                                        alt="" />
+
+                                    <div class="l_contents">
+                                        <h5 id="blue_color">Thuni Kada Blue Tee</h5>
+                                        <p class="description" id="description_blue">
+                                            Men Printed Navy Blue Round Neck Poly Cotton T-Shirt |
+                                            Thuni Kada
+                                        </p>
+                                        <form class="" action="">
+                                            <div class="input_div my-2">
+                                                <label for="price">price:₹</label>
+                                                <input class="price w-25" id="org_price_blue" type="number" min="1"
+                                                    value="1" />
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <label for="offer">Only:</label>
+                                                <input class="offer_price w-25 text-success" id="offer_price_blue"
+                                                    readonly type="text">
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <label for="discount">Discount:</label>
+                                                <select class="w-auto" id="discount_blue" name="discount"
+                                                    onchange="discountPriceBlue_(event)">
+                                                    <option value="20">20% off</option>
+                                                    <option value="50">₹50 off</option>
+                                                </select>
+                                            </div>
+                                            <div class="input_div my-2">
+                                                <label for="quantity">Maximum Quantity:</label>
+                                                <input class="quantity_input w-25" id="max_qty_blue" type="number"
+                                                    value="1" min="1" />
+                                            </div>
+                                            <div class="input_div my-2">
+                                                <input class="btn btn-dark w-100 rounded-0 mt-3" type="button"
+                                                    value="Add Product" onclick="addProductBlue_()" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yellow -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in" data-aos-duration="7000"
+                            class=" d-flex justify-content-center">
+                            <div class="card mt-2 mb-5 w-75">
+                                <div class="contents p-3">
+                                    <img src="./assets/img/products/yellow_thuni-kada.jpg" class="img-fluid" height=""
+                                        alt="" />
+
+                                    <div class="l_contents">
+                                        <h5 id="yellow_color">Thuni Kada Yellow Tee</h5>
+                                        <p class="description" id="description_yellow">
+                                            Men Printed Yellow Round Neck Poly Cotton T-Shirt | Thuni
+                                            Kada
+                                        </p>
+                                        <form action="">
+                                            <div class="input_div my-2">
+                                                <label for="price">price:₹</label>
+                                                <input class="price w-25" id="org_price_yellow" type="number" min="1"
+                                                    value="1" />
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <label for="offer">Only:</label>
+                                                <input class="offer_price w-25 text-success" id="offer_price_yellow"
+                                                    readonly type="text">
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <label for="discount">Discount:</label>
+                                                <select class="w-auto" id="discount" name="discount"
+                                                    onchange="discountPriceYellow_(event)">
+                                                    <option value="25">25% off</option>
+                                                    <option value="150">₹150 off</option>
+                                                </select>
+                                            </div>
+                                            <div class="input_div my-2">
+                                                <label for="quantity">Maximum Quantity:</label>
+                                                <input class="quantity_input w-25" id="max_qty_yellow" type="number"
+                                                    min="1" value="1" />
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <input class="btn btn-dark w-100 rounded-0 mt-3" type="button"
+                                                    value="Add Product" onclick="addProductyellow_()" />
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Black -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in" data-aos-duration="7000"
+                            class=" d-flex justify-content-center">
+                            <div class="card mt-2 mb-5 w-75">
+                                <div class="contents p-3">
+                                    <img id="tk_img_black" src="./assets/img/products/black_thuni-kada.jpg"
+                                        class="img-fluid" />
+
+                                    <div class="l_contents">
+                                        <h5 id="black_color">Thuni Kada Black Tee</h5>
+                                        <p class="description" id="description_black">
+                                            Men Printed Black Round Neck Poly Cotton T-Shirt | Thuni
+                                            Kada
+                                        </p>
+                                        <form action="">
+                                            <div class="input_div my-2">
+                                                <label for="price">price:₹</label>
+                                                <input class="price w-25" id="org_price_black" type="number" min="1"
+                                                    value="1" />
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <label for="offer">Only:</label>
+                                                <input class="offer_price w-25 text-success" id="offer_price_black"
+                                                    readonly type="text">
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <label for="discount">Discount:</label>
+                                                <select class="w-auto" id="discount" name="discount" required
+                                                    onchange="discountPriceBlack_(event)">
+                                                    <option value="25">25% off</option>
+                                                    <option value="50">₹50 off</option>
+                                                </select>
+                                            </div>
+                                            <div class="input_div my-2">
+                                                <label for="quantity">Maximum Quantity:</label>
+                                                <input class="quantity_input w-25" id="max_qty_black" type="number"
+                                                    min="1" value="1">
+                                            </div>
+
+                                            <div class="input_div my-2">
+                                                <input class="btn btn-dark w-100 rounded-0 mt-3" type="button"
+                                                    value="Add Product" onclick="addProductBlack_()" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<script>
+
+    var org_price_blue = document.getElementById("org_price_blue").value;
+    var org_price_yellow = document.getElementById("org_price_yellow").value;
+    var org_price_black = document.getElementById("org_price_black").value;
+
+
+    // length EO
+    {
+        {
+            let description_Blue_ = document.getElementById("description_blue").innerText;
+
+            if (description_Blue_.length > 20) {
+                let split_Description_Blue_ = description_Blue_.substr(0, 25) + "...";
+                // console.log(split_Description_Blue_);
+                document.getElementById("description_blue").innerText = split_Description_Blue_;
+            }
+        }
+        {
+
+            let description_ = document.getElementById("description_yellow").innerText;
+            if (description_.length > 20) {
+                let split_Description_Yellow_ = description_.substr(0, 25) + "...";
+                // console.log(split_Description_Yellow_);
+                document.getElementById("description_yellow").innerText = split_Description_Yellow_;
+            }
+        }
+        {
+
+            let description_ = document.getElementById("description_yellow").innerText;
+            if (description_.length > 20) {
+                let split_Description_Black_ = description_.substr(0, 25) + "...";
+                // console.log(split_Description_Black_);
+                document.getElementById("description_black").innerText = split_Description_Black_;
+            }
+        }
+    }
+    // discount calculation
+    var offer_Prize_Blue_;
+
+    var offer_Prize_Yellow_;
+
+    var offer_Prize_Black_;
+
+
+    var max_Quantity_Blue_ = document.getElementById('max_qty_blue');
+
+    var max_Quantity_Yellow_ = document.getElementById('max_qty_yellow');
+
+    var max_Quantity_Black_ = document.getElementById('max_qty_black');
+
+    // calculation EO
+    function discountPriceBlue_(event) {
+        let discount_Blue_ = event.target.value;
+        console.log(discount_Blue_);
+
+        let org_Price_Value = document.getElementById("org_price_blue").value;
+        // console.log(org_Price_Value);
+
+        // var offer_Price_Input = document.getElementById("offer_price").style="display:none;";
+        if (discount_Blue_ == 20) {
+            offer_Prize_Blue_ = org_Price_Value - org_Price_Value * (discount_Blue_ / 100);
+
+            document.getElementById("org_price_blue").style = "color: red; text-decoration: line-through;";
+
+        } else if (discount_Blue_ == 50) {
+            offer_Prize_Blue_ = org_Price_Value - discount_Blue_;
+            document.getElementById("org_price_blue").style = "color: red; text-decoration: line-through;";
+        }
+        offer_Prize_Blue_ = '₹' + offer_Prize_Blue_;
+
+        document.getElementById("offer_price_blue").value = offer_Prize_Blue_;
+
+        console.log("blue offer Price", offer_Prize_Blue_);
+    }
+    function discountPriceYellow_(event) {
+        let discount_Yellow_ = event.target.value;
+        console.log(discount_Yellow_);
+
+        let org_Price_Value = document.getElementById("org_price_yellow").value;
+        // console.log(org_Price_Value);
+
+        // var offer_Price_Input = document.getElementById("offer_price").style="display:none;";
+        if (discount_Yellow_ == 25) {
+            offer_Prize_Yellow_ = org_Price_Value - org_Price_Value * (discount_Yellow_ / 100);
+
+            document.getElementById("org_price_yellow").style = "color: red; text-decoration: line-through;";
+
+        } else if (discount_Yellow_ == 150) {
+            offer_Prize_Yellow_ = org_Price_Value - discount_Yellow_;
+            document.getElementById("org_price_yellow").style = "color: red; text-decoration: line-through;";
+        }
+        offer_Prize_Yellow_ = '₹' + offer_Prize_Yellow_;
+
+        document.getElementById("offer_price_yellow").value = offer_Prize_Yellow_;
+
+        console.log('offer yellow', offer_Prize_Yellow_);
+    }
+    function discountPriceBlack_(event) {
+        let discount_Black_ = event.target.value;
+        // console.log(discount_Black_);
+
+        let org_Price_Value = document.getElementById("org_price_black").value;
+        // console.log(org_Price_Value);
+
+        // var offer_Price_Input = document.getElementById("offer_price").style="display:none;";
+        if (discount_Black_ == 25) {
+            offer_Prize_Black_ = org_Price_Value - org_Price_Value * (discount_Black_ / 100);
+
+            document.getElementById("org_price_black").style = "color: red; text-decoration: line-through;";
+
+        } else if (discount_Black_ == 50) {
+            offer_Prize_Black_ = org_Price_Value - discount_Black_;
+            document.getElementById("org_price_black").style = "color: red; text-decoration: line-through;";
+        }
+        offer_Prize_Black_ = '₹' + offer_Prize_Black_;
+
+        document.getElementById("offer_price_black").value = offer_Prize_Black_;
+
+        console.log(offer_Prize_Black_);
+    }
+
+
+    //add product EO
+
+    function addProductBlue_() {
+        let tk_color_blue_ = document.getElementById("blue_color").innerText;
+        console.log(tk_color_blue_);
+        if (offer_Prize_Blue_ && max_Quantity_Blue_.value) {
+            localStorage.setItem("color", tk_color_blue_);
+            localStorage.setItem("discount", offer_Prize_Blue_);
+            localStorage.setItem("quantity", parseInt(max_Quantity_Blue_.value));
+            localStorage.setItem("org_price", org_price_blue);
+            window.location.href = "product-info.html";
+        } else {
+            document.getElementById("alert").style = "display:block;";
+            // alert("Please select Your Discount and Type the Max Quantity");
+            // if (max_Quantity_Black_.value == 0){
+            // }
+            // alert("Please select Your Discount");
+            // console.log(offer_Prize_Blue_);
+        }
+    }
+    // product yellow
+    function addProductyellow_() {
+        let tk_color_yellow_ = document.getElementById("yellow_color").innerText;
+        console.log(tk_color_yellow_);
+        if (offer_Prize_Yellow_ && max_Quantity_Yellow_.value) {
+            localStorage.setItem("color", tk_color_yellow_);
+            localStorage.setItem("discount", offer_Prize_Yellow_);
+            localStorage.setItem("quantity", parseInt(max_Quantity_Yellow_.value));
+            localStorage.setItem("org_price", org_price_yellow);
+
+            window.location.href = "product-info.html";
+        } else {
+            document.getElementById("alert").style = "display:block;";
+            // alert("Please select Your Discount and Type the Max Quantity");
+        }
+        console.log(offer_Prize_Yellow_);
+    }
+    // product black
+    function addProductBlack_() {
+        let tk_color_black_ = document.getElementById("black_color").innerText;
+        console.log(tk_color_black_);
+        if (offer_Prize_Black_ && max_Quantity_Black_.value) {
+            localStorage.setItem("color", tk_color_black_);
+            localStorage.setItem("discount", offer_Prize_Black_);
+            localStorage.setItem("quantity", max_Quantity_Black_.value);
+            localStorage.setItem("org_price", org_price_black);
+
+            window.location.href = "product-info.html";
+        } else {
+            document.getElementById("alert").style = "display:block;";
+            // alert("Please select Your Discount and Type the Max Quantity");
+        }
+        console.log(offer_Prize_Black_);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>

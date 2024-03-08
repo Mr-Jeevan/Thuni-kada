@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THUNI KADA</title>
+
+
+    <!-- icon -->
+    <link rel="icon" type="img/jpg" href="./assets/img/logo/tk_short-logo-png-copy.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./buying.css" />
+
+    <!-- BS CSS -->
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+
+    <!-- AOS Link-->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+    <!-- BS jquery -->
+    <script defer src="./assets/bootstrap-5.2.3-dist/jquery/jquery.js"></script>
+
+    <!-- BS JS -->
+    <script defer src="./assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="content bg-black">
+            <img src="./assets/img/logo/thuni-kada.jpg" width="200px" class="d-block mx-auto" alt="" />
+        </div>
+    </header>
+    <section id="buying">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-5">
+                    <div class="content_l d-flex">
+                        <div class="img w-50">
+                            <h3 class="afr_line" id="pre_color_h3"></h3>
+                            <img id="pre_final_img" src="" class="img-fluid w-" alt="" />
+                        </div>
+                        <div class="l_content mt-5 ms-3">
+                            <p class="fw-500" id="size">
+                                Size: <span class="text-success" id="pre_size"></span>
+                            </p>
+                            <div></div>
+                            <p class="fw-500" id="quantity">
+                                Quantity: <span class="text-success" id="pre_quantity"></span>
+                            </p>
+                            <p class="fw-500 flex-nowrap" id="total">
+                                Total: <span class="text-success" id="pre_total"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                    </div>
+                    <div class="full-screen-overlay">
+                        <span class="close-button">&times;</span>
+                        <img src="" alt="Full Screen Image" class="full-screen-image">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-7">
+                    <form action="" class=" ">
+                        <div class="content_r card p-5">
+                            <h2 class="afr_line_cen text-center">Buy Panunga frand</h2>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <!-- <label for="name" style="display: block;">First Name</label> -->
+                                    <div class="form-group">
+                                        <input class="my-2 w-100 form-control" type="text" name="name" id="fname"
+                                            placeholder="First Name*" />
+                                        <label class="m-1 w-100" style="display: none" id="enterfnamewarning"
+                                            for="text">Enter Your First Name</label>
+                                        <label class="m-1 w-100" style="display: none" id="minfnamewarning"
+                                            for="text">Min 3 characters is required</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <!-- <label for="name" style="display: block;">Last Name</label> -->
+                                    <div class=""></div>
+                                    <input class="my-2 w-100 form-control" type="text" name="name" id="lname"
+                                        placeholder="Last Name" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <!-- <label for="email">Email</label> -->
+                                <input class="my-2 w-100 form-control" type="text" name="email" id="email"
+                                    placeholder="Email*" />
+                                <label class="m-1 w-100" style="display: none" id="enteremailwarning" for="text">Enter
+                                    Your Email</label>
+                                <label class="m-1 w-100" style="display: none" id="invalidemailwarning"
+                                    for="text">Invalid Email</label>
+                            </div>
+
+                            <div>
+                                <!-- <label for="address">Address</label> -->
+                                <textarea class="my-2 w-100 form-control" type="text" name="address" id="address"
+                                    placeholder="Address" cols="30" rows="3"></textarea>
+                                <label class="m-1 w-100" id="addresswaring" style="display: none" for="addres">Type Your
+                                    Address</label>
+
+                                <!-- <input class="my-2 w-100 " type="text" name="address" id="address" placeholder="Address"> -->
+                            </div>
+
+                            <div>
+                                <input class="my-2 w-100 form-control" type="text" name="payment" id="payment"
+                                    placeholder="UPI id*" />
+                                <label class="m-1 w-100" style="display: none" id="enterupidwarning" for="text">Enter
+                                    Your UPI id</label>
+                            </div>
+
+                            <div>
+                                <!-- <label for="password">Password</label> -->
+                                <input class="my-2 w-100 form-control" type="password" name="password" id="password"
+                                    placeholder="Password*" />
+                                <label class="m-1 w-100" style="display: none" id="enterpasswordwarning"
+                                    for="text">Enter Your Password</label>
+                            </div>
+
+                            <div>
+                                <!-- <label for="confirm">Confirm Password</label> -->
+                                <input class="my-2 w-100 form-control" type="password" name="confirm"
+                                    id="confirmpassword" placeholder="Confirm Password*" />
+                                <label class="m-1 w-100" style="display: none" id="enterconfirmpasswordwarning"
+                                    for="text">Enter Your Confirm Password</label>
+                                <label class="m-1 w-100" style="display: none" id="confirmpasswordwarning"
+                                    for="text">Passwords do not match</label>
+                            </div>
+
+                            <div class="text-center">
+
+                                <input class="my-2 text-center btn btn-warning    " id="submit" type="button"
+                                    type="button" value="Submit" />
+                            </div>
+                            <img id="qr_img" class=" qr_img full-screen-trigger position-relative" onclick="submitbn()"
+                                src="./assets/img/buying-qrcode/onnum-illai.gif" alt="Image">
+                            <!-- <img id="qr_img" class=" qr_img full-screen-trigger position-relative" onclick="submitbn()"
+                                src="./assets/img/buying-qrcode/b-qrcode.jpg" alt="Image"> -->
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function submitbn() {
+        let fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var address = document.getElementById("address").value;
+        var payment = document.getElementById("payment").value;
+        // var age = document.getElementById('age').value;
+        var password = document.getElementById("password").value;
+        var confirmpassword = document.getElementById("confirmpassword").value;
+
+        var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        console.log("fname>>>>>>>>>", fname);
+        console.log("lname>>>>>>>>>>", lname);
+        console.log("email>>>>>>>>>", email);
+        console.log("address>>>>>>>>>", address);
+        // console.log('age>>>>>>>>', age);
+        console.log("password>>>>>>>>", password);
+        console.log("confirm>>>>>>>>>>", confirmpassword);
+
+        console.log("fnamelengthw", fname.length);
+
+        let fname_flag = 0
+        let address_flag = 0
+        let email_flag = 0
+        let password_flag = 0
+
+        if (fname) {
+            if (fname.length >= 3) {
+                document.getElementById("enterfnamewarning").style =
+                    "display:none; color:red;";
+                document.getElementById("minfnamewarning").style = "display:none;";
+            } else {
+                document.getElementById("minfnamewarning").style =
+                    "display:block; color:red;";
+            }
+            document.getElementById("enterfnamewarning").style = "display:none;";
+            document.getElementById("fname").style = "border:1px solid green";
+            fname_flag = 1;
+
+        } else {
+            document.getElementById("enterfnamewarning").style =
+                "display:block; color:red;";
+            document.getElementById("fname").style = "border:1px solid red";
+        }
+        if (email == emailFormat) {
+            document.getElementById("invalidemailwarning").style = "display:none;";
+        }
+        if (email) {
+
+            if (email == emailFormat) {
+                document.getElementById("invalidemailwarning").style =
+                    "display:none;";
+            } else {
+                document.getElementById("invalidemailwarning").style =
+                    "display:block; color:red; ";
+            }
+            document.getElementById("enteremailwarning").style = "display:none;";
+            document.getElementById("email").style = "border:1px solid green";
+            email_flag = 1
+        } else {
+            document.getElementById("enteremailwarning").style =
+                "display:block; color:red;";
+            document.getElementById("enteremailwarning").style =
+                "display:block; color:red;";
+        }
+
+        if (address) {
+            document.getElementById("addresswaring").style = "display:none;";
+            document.getElementById("address").style = "border:1px solid green";
+            address_flag = 1;
+        } else {
+            document.getElementById("addresswaring").style =
+                "display:block;  color:red;";
+            document.getElementById("address").style = "display:block; color:red;";
+        }
+
+        if (payment) {
+            document.getElementById("enterupidwarning").style = "display:none;";
+            document.getElementById("payment").style = "border:1px solid green";
+        } else {
+            document.getElementById("enterupidwarning").style = "display:block; color:red;";
+            document.getElementById("payment").style = "display:block; color:red;";
+
+        }
+
+        if (password) {
+            document.getElementById("enterpasswordwarning").style = "display:none;";
+            document.getElementById("password").style = "border:1px solid green";
+        } else {
+            document.getElementById("enterpasswordwarning").style =
+                "display:block; color:red;";
+            document.getElementById("enterpasswordwarning").style =
+                "display:block; color:red;";
+        }
+
+        if (confirmpassword) {
+            if (confirmpassword === password) {
+                document.getElementById("enterconfirmpasswordwarning").style =
+                    "display:none;";
+                document.getElementById("confirmpasswordwarning").style =
+                    "display:none;";
+            } else {
+                document.getElementById("confirmpasswordwarning").style =
+                    "display:block; color:red;";
+            }
+            document.getElementById("enterconfirmpasswordwarning").style =
+                "display:none;";
+            document.getElementById("confirmpassword").style =
+                "border:1px solid green";
+            password_flag = 1;
+
+        } else {
+            document.getElementById("enterconfirmpasswordwarning").style =
+                "display:block; color:red;";
+        }
+
+        if (fname_flag && address_flag && email_flag && password_flag) {
+            let qr_img = document.getElementById('qr_img');
+            qr_img.style.display = 'block';
+
+        }
+
+    }
+    // from products page
+    var h3_color = localStorage.getItem("h3_color");
+    var preview_img = localStorage.getItem("img");
+    var size = localStorage.getItem("size");
+    var quantity = localStorage.getItem("quantity");
+    var total = localStorage.getItem("total");
+    var discount = localStorage.getItem("discount");
+
+    // fare use
+    var pre_color_h3 = document.getElementById("pre_color_h3");
+    var pre_final_img = document.getElementById("pre_final_img");
+    var pre_size = document.getElementById("pre_size");
+    var pre_quantity = document.getElementById("pre_quantity");
+    var pre_total = document.getElementById("pre_total");
+
+    // console.log(preview_img);
+
+    pre_color_h3.innerText = h3_color;
+    pre_final_img.src = preview_img;
+    pre_size.innerText = size;
+    pre_quantity.innerText = quantity;
+    if (total == 0) {
+        pre_total.innerText = discount;
+    } else {
+        pre_total.innerText = total;
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const fullScreenTrigger = document.querySelector(".full-screen-trigger");
+        const fullScreenOverlay = document.querySelector(".full-screen-overlay");
+        const fullScreenImage = document.querySelector(".full-screen-image");
+        const closeButton = document.querySelector(".close-button");
+
+        fullScreenTrigger.addEventListener("click", function () {
+            const imgSrc = this.getAttribute("src");
+            fullScreenImage.setAttribute("src", imgSrc);
+            fullScreenOverlay.style.display = "block";
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        });
+
+        closeButton.addEventListener("click", function () {
+            closeFullScreen();
+        });
+
+        fullScreenOverlay.addEventListener("click", function (event) {
+            if (event.target === fullScreenOverlay) {
+                closeFullScreen();
+            }
+        });
+
+        function closeFullScreen() {
+            fullScreenOverlay.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling
+        }
+    });
+</script>
+
+</html>
