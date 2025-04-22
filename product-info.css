@@ -105,6 +105,28 @@ p.tk_total {
 }
 
 
+
+.footer-a {
+    text-decoration: none;
+    color: #00a0eb;
+    transition: .5s ease-in-out;
+}
+
+.footer-a:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+.fa-heart {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.footer-a:hover i {
+    opacity: 1;
+}
+
+
 @media only screen and (max-width: 600px) {
     #tk_product .reviews {
         left: 70px;
