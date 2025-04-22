@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thuni Kada</title>
 
-    
+
     <!-- icon -->
     <link rel="icon" type="img/jpg" href="./assets/img/logo/tk_short-logo-png-copy.png">
 
@@ -44,16 +44,16 @@
                     <div class="col-12 col-md-4 col-lg-4">
                         <div class="img_content ">
                             <h2 class="afr_line" id="color_h3"></h2>
-                            <img id="img_blue" class="img-fluid rounded" src="./assets/img/products/NavyBlue_thuni-kada.jpg"
-                                style="display: none;">
-                            <img id="img_yellow" class="img-fluid rounded" src="./assets/img/products/yellow_thuni-kada.jpg"
-                                style="display: none;">
-                            <img id="img_black" class="img-fluid rounded" src="./assets/img/products/black_thuni-kada.jpg"
-                                style="display: none;">
+                            <img id="img_blue" class="img-fluid rounded"
+                                src="./assets/img/products/NavyBlue_thuni-kada.jpg" style="display: none;">
+                            <img id="img_yellow" class="img-fluid rounded"
+                                src="./assets/img/products/yellow_thuni-kada.jpg" style="display: none;">
+                            <img id="img_black" class="img-fluid rounded"
+                                src="./assets/img/products/black_thuni-kada.jpg" style="display: none;">
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-8">
-                        <div class="l_content card p-2 px-4 mt-5">
+                        <div class="l_content blur-card card p-2 px-4 mt-5">
                             <h2 id="color_name_output"></h2>
                             <h5 class="text-success" id="tk_description_blue" style=" display: none;">Men Printed Navy
                                 Blue Round
@@ -63,7 +63,8 @@
                                 Yellow Round
                                 Neck Poly Cotton T-Shirt
                                 | Thuni Kada</h5>
-                            <h5 class="text-success" id="tk_description_black" style=" display: none;">Men Printed Black Round Neck Poly Cotton T-Shirt 
+                            <h5 class="text-success" id="tk_description_black" style=" display: none;">Men Printed Black
+                                Round Neck Poly Cotton T-Shirt
                                 | Thuni Kada</h5>
                             <div class="position-relative my-2">
                                 <div class="star_rating rounded-5">
@@ -75,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center">
-                                <h3 class="text-success me-3" id="tk_discount"></h3> 
+                                <h3 class="text-success me-3" id="tk_discount"></h3>
                             </div>
 
                             <div class="my-lg-3 my-md-1">
@@ -116,7 +117,8 @@
                                     <p class="tk_total">Total Price: <span class="text-success"
                                             id="tk_total_price"></span></p>
                                 </div>
-                                <input class="btn btn-danger mt-lg-5 p-2 px-4 mt-md-2" type="button" value="Buy Product" onclick="buyProduct_()">
+                                <input class="btn btn-danger mt-lg-5 p-2 px-4 mt-md-2" type="button" value="Buy Product"
+                                    onclick="buyProduct_()">
                             </form>
                         </div>
                     </div>
@@ -124,6 +126,34 @@
             </div>
         </section>
     </main>
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>THUNI KADA</h5>
+                    <p>Your trusted destination for quality fabrics and accessories.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@thunikada.com</p>
+                    <p>Phone: +91 12345 67890</p>
+                    <p>Location: Chennai, Tamil Nadu</p>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2025 THUNI KADA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
@@ -133,7 +163,7 @@
     var discount_price_ = localStorage.getItem("discount"); // discount
     var max_Quantity_ = localStorage.getItem("quantity"); //quantity
     var org_price = localStorage.getItem("org_price"); //orginal price
-    
+
 
     //fare use
     var color_h3 = document.getElementById("color_h3");
@@ -161,7 +191,7 @@
         function plus() {
             console.log(max_Quantity_);
             console.log(quantity_count.value);
-            console.log(typeof(max_Quantity_));
+            console.log(typeof (max_Quantity_));
             console.log(parseInt(max_Quantity_) > quantity_count.value);
             if (parseInt(max_Quantity_) > quantity_count.value) {
                 quantity_count.value++;
@@ -171,7 +201,6 @@
                 current_value = '₹' + current_value;
                 tk_total_price.innerText = current_value;
                 // console.log(current_value);
-
             }
         }
 

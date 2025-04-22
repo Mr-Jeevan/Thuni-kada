@@ -5,14 +5,22 @@
 }
 
 body {
-    background-color: #e9e9e9 ;
+    background-color: #e9e9e9;
     background-image: url(./assets/img/logo/tk_short-logo-copy.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
+.blur-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
 
 .afr_line::after {
     content: " ";
@@ -25,11 +33,12 @@ body {
 .afr_line_cen::after {
     content: " ";
     display: block;
-    margin: auto ;
+    margin: auto;
     height: 2px;
     width: 42px;
     background-color: #d7c013;
 }
+
 #buying .container .row .content_l .l_content p {
     background: #f9f9f99f;
 }
@@ -40,6 +49,7 @@ body {
     font-size: 25px;
     font-weight: 500;
 }
+
 #buying .container .row .content_r {
     background: #f9f9f99f;
 }
@@ -58,53 +68,53 @@ body {
 }
 
 .full-screen-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 9999;
-            transition: 1s;
-        }
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    transition: 1s;
+}
 
-        .full-screen-overlay img {
-            display: block;
-            margin: auto;
-            width: 50%;
-            /* max-height: 90%; */
-            transition: 1s;
-            margin-top: 15%;
+.full-screen-overlay img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    /* max-height: 90%; */
+    transition: 1s;
+    margin-top: 15%;
 
 
-        }
+}
 
-        .close-button {
-            color: #fff;
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 30px;
-            cursor: pointer;
-        }
+.close-button {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
 
-        @media only screen and (max-device-width: 430px) {
-            .full-screen-overlay {
-                padding-top: 20%;
+@media only screen and (max-device-width: 430px) {
+    .full-screen-overlay {
+        padding-top: 20%;
 
-            }
+    }
 
-            .full-screen-overlay img {
+    .full-screen-overlay img {
 
-                max-width: 90%;
-                max-height: 90%;
-                left: 50%;
+        max-width: 90%;
+        max-height: 90%;
+        left: 50%;
 
-            
-            }
 
-        }
+    }
+
+}
 
 @media (max-width: 1199px) {
     .qr_img {
